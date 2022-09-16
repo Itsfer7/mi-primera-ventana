@@ -1,9 +1,10 @@
 package org.iesfm.ventana;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.border.AbstractBorder;
 import java.awt.*;
-import java.util.concurrent.Flow;
+import java.awt.image.BufferedImage;
+import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,19 +13,14 @@ public class Main {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // mainPanel
         JPanel mainPanel = new JPanel();
-        mainPanel.setBackground(Color.yellow);
+        mainPanel.setBounds(0,0,300,300);
+        mainPanel.setBackground(Color.BLACK);
 
-        JLabel lblUser = new JLabel("Usuario:");
-        mainPanel.add(lblUser);
-
-        JTextField textFieldUser = new JTextField(16);
-        mainPanel.add(textFieldUser);
-
-        JButton buttonAccept = new JButton("Aceptar");
-        mainPanel.add(buttonAccept);
-
+        // secondPanel
         JPanel secondPanel = new JPanel();
+        secondPanel.setBounds(0,0,100,100);
         secondPanel.setBackground(Color.BLUE);
 
         JLabel lblUser1 = new JLabel("Usuario:");
@@ -36,12 +32,46 @@ public class Main {
         JButton buttonAccept1 = new JButton("Aceptar");
         secondPanel.add(buttonAccept1);
 
+        // thirdPanel
+        JPanel thirdPanel = new JPanel();
+        thirdPanel.setBounds(0,0,100,100);
+        thirdPanel.setBackground(Color.RED);
+
+        JLabel lblUser2 = new JLabel("Usuario:");
+        thirdPanel.add(lblUser2);
+
+        JTextField textFieldUser2 = new JTextField(16);
+        thirdPanel.add(textFieldUser2);
+
+        JButton buttonAccept2 = new JButton("Aceptar");
+        thirdPanel.add(buttonAccept2);
+
+        JCheckBox checkBox = new JCheckBox("Aceptar");
+        thirdPanel.add(checkBox);
+
+        JRadioButton radioButton = new JRadioButton("Aceptar");
+        thirdPanel.add(radioButton);
+
+        JComboBox comboBox = new JComboBox();
+        comboBox.addItem("Opcion 1");
+        comboBox.addItem("Opcion 2");
+        comboBox.addItem("Opcion 3");
+        thirdPanel.add(comboBox);
+
+        JLabel label = new JLabel();
+        label.setIcon(new ImageIcon("src/org/iesfm/ventana/imagen.png"));
+        Dimension size = label.getPreferredSize();
+        label.setBounds(50, 30, size.width, size.height);
+        thirdPanel.add(label);
+
+
         frame.add(mainPanel, BorderLayout.CENTER);
-        frame.add(secondPanel, BorderLayout.PAGE_END);
 
-        frame.setLayout(new GridLayout(2,2));
+        mainPanel.add(secondPanel, BorderLayout.NORTH);
+        mainPanel.add(thirdPanel, BorderLayout.SOUTH);
 
-        frame.repaint();
+        frame.pack();
         frame.revalidate();
+        frame.repaint();
     }
 }
