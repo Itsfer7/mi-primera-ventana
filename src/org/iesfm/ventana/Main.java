@@ -59,11 +59,8 @@ public class Main {
         thirdPanel.add(comboBox);
 
         JLabel label = new JLabel();
-        label.setIcon(new ImageIcon("src/org/iesfm/ventana/imagen.png"));
-        Dimension size = label.getPreferredSize();
-        label.setBounds(50, 30, size.width, size.height);
+        label.setIcon(new ImageIcon("imagen.png"));
         thirdPanel.add(label);
-
 
         frame.add(mainPanel, BorderLayout.CENTER);
 
