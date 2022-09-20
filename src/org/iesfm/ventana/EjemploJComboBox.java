@@ -32,6 +32,7 @@ public class EjemploJComboBox {
         comboBox.setActionCommand("Python");
         mainPanel.add(comboBox);
 
+
         JButton showButton = new JButton("Show");
         showButton.addActionListener(e -> {
                 String selected = (String) comboBox.getSelectedItem();
