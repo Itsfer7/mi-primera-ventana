@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class EjemploFLowLayout1 {
+public class EjemploFlowLayout1 {
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.setBounds(10,10,550,150);
