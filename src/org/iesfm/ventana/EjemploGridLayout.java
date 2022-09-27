@@ -11,6 +11,7 @@ public class EjemploGridLayout {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel();
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(100,0,0,0));
         mainPanel.setLayout(new GridLayout(3,3));
 
         JButton button1 = new JButton("O");
