@@ -12,7 +12,6 @@ public class Calculadora2 {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel();
-        mainPanel.setBorder(BorderFactory.createEmptyBorder(10,0,0,0));
         mainPanel.setLayout(new BorderLayout());
 
         Font font = new Font("SansSerif", Font.BOLD, 45);
@@ -27,11 +26,12 @@ public class Calculadora2 {
 
         JPanel buttonPanel = new JPanel();
         buttonPanel.setBounds(10,10,500,400);
-        //buttonPanel.setBorder(BorderFactory.createEmptyBorder(30,0,0,0));
         buttonPanel.setLayout(new GridLayout(4,4,2,2));
 
         JPanel buttonEndPanel = new JPanel();
         buttonEndPanel.setLayout(new GridLayout(1,2,2,2));
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(0,0,1,0));
+        buttonEndPanel.setPreferredSize(new Dimension(65,65));
 
         JButton buttonDel = new JButton("DEL");
         buttonDel.setBackground(new Color(15,130,133));
@@ -42,11 +42,9 @@ public class Calculadora2 {
         JButton buttonSum = new JButton("+");
         JButton buttonDecimal = new JButton(".");
         JButton buttonReset = new JButton("RESET");
-        buttonReset.setPreferredSize(new Dimension(65,65));
         buttonReset.setBackground(new Color(15,130,133));
         buttonReset.setForeground(Color.white);
         JButton buttonEquals = new JButton("=");
-        buttonEquals.setPreferredSize(new Dimension(65,65));
         buttonEquals.setBackground(new Color(215,78,29));
         buttonEquals.setForeground(Color.white);
         JButton button1 = new JButton("1");
@@ -58,7 +56,7 @@ public class Calculadora2 {
         JButton button7 = new JButton("7");
         JButton button8 = new JButton("8");
         JButton button9 = new JButton("9");
-        JButton button0 = new JButton("O");
+        JButton button0 = new JButton("0");
 
         buttonPanel.add(button7);
         buttonPanel.add(button8);
