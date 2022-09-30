@@ -3,7 +3,7 @@ package org.iesfm.ventana;
 import javax.swing.*;
 import java.awt.*;
 
-public class Calculadora {
+public class Calculator1 {
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.setBounds(10,10,500,500);
