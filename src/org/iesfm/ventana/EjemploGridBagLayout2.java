@@ -12,12 +12,13 @@ public class EjemploGridBagLayout2 {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel();
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(1,1,1,1));
         GridBagLayout gridBagLayout = new GridBagLayout();
         mainPanel.setLayout(gridBagLayout);
 
-        JTextArea textArea1 = new JTextArea("Text Area");
+        JTextArea textArea1 = new JTextArea("Area Texto");
         GridBagConstraints constraintsTextArea1 = new GridBagConstraints(
-                0,0,2,2,10,10000,
+                0,0,2,2,10,150,
                 GridBagConstraints.CENTER,
                 GridBagConstraints.BOTH,
                 new Insets(0,0,0,0),
@@ -60,10 +61,10 @@ public class EjemploGridBagLayout2 {
                 0,0
         );
 
-        JTextField textField1 = new JTextField("Text Field");
+        JTextField textField1 = new JTextField("Campo Texto");
         GridBagConstraints constraintsTextField1 = new GridBagConstraints(
                 1,2,1,1,1,0,
-                GridBagConstraints.SOUTH,
+                GridBagConstraints.CENTER,
                 GridBagConstraints.HORIZONTAL,
                 new Insets(0,0,0,0),
                 0,0
