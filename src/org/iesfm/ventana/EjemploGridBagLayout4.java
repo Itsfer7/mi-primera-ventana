@@ -8,7 +8,7 @@ public class EjemploGridBagLayout4 {
         JFrame frame = new JFrame();
         frame.setBounds(10,10,500,400);
         frame.setVisible(true);
-        frame.setTitle("Ejemplo 2 GridBagLayout");
+        frame.setTitle("Ejemplo 4 GridBagLayout");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel();
