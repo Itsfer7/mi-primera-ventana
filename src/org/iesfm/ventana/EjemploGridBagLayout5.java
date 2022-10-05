@@ -46,8 +46,6 @@ public class EjemploGridBagLayout5 {
                 0,0
         );
 
-
-
         JTextField findWhatTextField = new JTextField();
         GridBagConstraints constraintsFindWhatTextField = new GridBagConstraints(
                 1,0,1,1,50,1,
