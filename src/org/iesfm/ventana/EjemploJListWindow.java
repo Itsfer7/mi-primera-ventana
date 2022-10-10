@@ -52,24 +52,12 @@ public class EjemploJListWindow {
         JList<String> jListNames = new JList<>();
         jListNames.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
         DefaultListModel<String> model = new DefaultListModel<>();
-        model.addElement("Pepito Perez");
-        model.addElement("Juanito Perez");
-        model.addElement("Manolo Perez");
-        model.addElement("Pepito Perez");
-        model.addElement("Juanito Perez");
-        model.addElement("Manolo Perez");
-        model.addElement("Pepito Perez");
-        model.addElement("Juanito Perez");
-        model.addElement("Manolo Perez");
-        model.addElement("Pepito Perez");
-        model.addElement("Juanito Perez");
-        model.addElement("Manolo Perez");
+        JScrollPane scrollPane = new JScrollPane(jListNames);
+        scrollPane.setViewportView(jListNames);
         jListNames.setModel(model);
-
-
-        JScrollPane scrollbar = new JScrollPane();
-        scrollbar.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-        jListNames.add(scrollbar);
+        for (int i = 1; i <= 30; i++) {
+            model.addElement("Nombre " + i);
+        }
 
         labelJList.setLayout(new GridBagLayout());
         GridBagConstraints constraintsJListNames = new GridBagConstraints(
@@ -113,7 +101,7 @@ public class EjemploJListWindow {
         mainPanel.add(labelJList, constraintsLabelJList);
         mainPanel.add(textField, constraintsTextField);
         mainPanel.add(addButton, constraintsAddButton);
-        mainPanel.add(jListNames, constraintsJListNames);
+        mainPanel.add(scrollPane, constraintsJListNames);
         mainPanel.add(deleteButton, constraintsDeleteButton);
         mainPanel.add(deleteListButton, constraintsDeleteListButton);
         mainPanel.add(label, constraintsLabel);
