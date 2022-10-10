@@ -8,6 +8,7 @@ public class EjemploJListWindow {
         JFrame frame = new JFrame();
         frame.setBounds(10,10,300,400);
         frame.setVisible(true);
+        frame.setResizable(false);
         frame.setTitle("Ejemplo JList");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -20,7 +21,7 @@ public class EjemploJListWindow {
         Font font = new Font("Arial", Font.BOLD, 30);
         labelJList.setFont(font);
         labelJList.setLayout(new GridBagLayout());
-        labelJList.setBorder(BorderFactory.createBevelBorder(1));
+        labelJList.setBorder(BorderFactory.createLoweredBevelBorder());
         GridBagConstraints constraintsLabelJList = new GridBagConstraints(
                 0,0,2,1,0,0,
                 GridBagConstraints.CENTER,
@@ -28,8 +29,9 @@ public class EjemploJListWindow {
                 new Insets(0,0,10,0),
                 0,0
         );
+        labelJList.setPreferredSize(new Dimension(200, 60));
 
-        JTextField textField = new JTextField("Pepito Perez");
+        JTextField textField = new JTextField();
         labelJList.setLayout(new GridBagLayout());
         GridBagConstraints constraintsTextField = new GridBagConstraints(
                 0,1,1,1,2,1,
@@ -38,16 +40,7 @@ public class EjemploJListWindow {
                 new Insets(0,0,10,0),
                 0,0
         );
-
-        JButton addButton = new JButton("Agregar");
-        labelJList.setLayout(new GridBagLayout());
-        GridBagConstraints constraintsAddButton = new GridBagConstraints(
-                1,1,1,1,0,1,
-                GridBagConstraints.CENTER,
-                GridBagConstraints.HORIZONTAL,
-                new Insets(0,2,10,0),
-                0,0
-        );
+        textField.setPreferredSize(new Dimension(0, 25));
 
         JList<String> jListNames = new JList<>();
         jListNames.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
@@ -58,6 +51,24 @@ public class EjemploJListWindow {
         for (int i = 1; i <= 30; i++) {
             model.addElement("Nombre " + i);
         }
+
+        JButton addButton = new JButton("Agregar");
+        labelJList.setLayout(new GridBagLayout());
+        GridBagConstraints constraintsAddButton = new GridBagConstraints(
+                1,1,1,1,0,1,
+                GridBagConstraints.CENTER,
+                GridBagConstraints.HORIZONTAL,
+                new Insets(0,2,10,0),
+                0,0
+        );
+        addButton.addActionListener(e -> {
+            if (!textField.getText().isEmpty()) {
+                model.addElement(textField.getText());
+                textField.setText("");
+            } else {
+                JOptionPane.showMessageDialog(frame, "El campo está vacío");
+            }
+        });
 
         labelJList.setLayout(new GridBagLayout());
         GridBagConstraints constraintsJListNames = new GridBagConstraints(
@@ -77,6 +88,10 @@ public class EjemploJListWindow {
                 new Insets(0,0,10,0),
                 0,0
         );
+        deleteButton.addActionListener(e -> {
+            int index = jListNames.getSelectedIndex();
+            model.remove(index);
+        });
 
         JButton deleteListButton = new JButton("Borrar Lista");
         labelJList.setLayout(new GridBagLayout());
@@ -87,6 +102,9 @@ public class EjemploJListWindow {
                 new Insets(0,2,10,0),
                 0,0
         );
+        deleteListButton.addActionListener(e -> {
+            model.clear();
+        });
 
         JLabel label = new JLabel("Se agregó un nuevo elemento");
         labelJList.setLayout(new GridBagLayout());
