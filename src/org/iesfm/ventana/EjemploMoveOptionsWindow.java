@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class EjemploMoveOptionsWindow {
+
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.setBounds(10,10,450,300);
