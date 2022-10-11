@@ -2,6 +2,9 @@ package org.iesfm.ventana;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class EjemploJListWindow {
     public static void main(String[] args) {
@@ -29,6 +32,20 @@ public class EjemploJListWindow {
                 new Insets(0,0,10,0),
                 0,0
         );
+        labelJList.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                super.mouseEntered(e);
+                labelJList.setForeground(Color.RED);
+            }
+        });
+        labelJList.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseExited(MouseEvent e) {
+                super.mouseExited(e);
+                labelJList.setForeground(Color.BLACK);
+            }
+        });
         labelJList.setPreferredSize(new Dimension(200, 60));
 
         JTextField textField = new JTextField();
@@ -106,7 +123,7 @@ public class EjemploJListWindow {
             model.clear();
         });
 
-        JLabel label = new JLabel("Se agregó un nuevo elemento");
+        JLabel label = new JLabel();
         labelJList.setLayout(new GridBagLayout());
         GridBagConstraints constraintsLabel = new GridBagConstraints(
                 0,5,3,1,1,1,
@@ -115,6 +132,12 @@ public class EjemploJListWindow {
                 new Insets(0,0,10,0),
                 0,0
         );
+        jListNames.addListSelectionListener(e -> {
+            if (jListNames.getSelectedValue() != null) {
+                label.setText("Seleccionado: " + jListNames.getSelectedValue());
+            }
+        });
+
 
         mainPanel.add(labelJList, constraintsLabelJList);
         mainPanel.add(textField, constraintsTextField);
