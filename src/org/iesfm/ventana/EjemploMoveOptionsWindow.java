@@ -21,8 +21,8 @@ public class EjemploMoveOptionsWindow {
         JList<String> jListOptions1 = new JList<>();
         jListOptions1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
         DefaultListModel<String> model1 = new DefaultListModel<>();
-        JScrollPane scrollPane1 = new JScrollPane(jListOptions1);
-        scrollPane1.setViewportView(jListOptions1);
+        JScrollPane jListOptions1ScrollPane = new JScrollPane(jListOptions1);
+        jListOptions1ScrollPane.setViewportView(jListOptions1);
         jListOptions1.setModel(model1);
         model1.addElement("strSubjectName");
         model1.addElement("strStandardName");
@@ -41,8 +41,8 @@ public class EjemploMoveOptionsWindow {
         JList<String> jListOptions2 = new JList<>();
         jListOptions2.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
         DefaultListModel<String> model2 = new DefaultListModel<>();
-        JScrollPane scrollPane2 = new JScrollPane(jListOptions2);
-        scrollPane2.setViewportView(jListOptions2);
+        JScrollPane jListOptions2ScrollPane = new JScrollPane(jListOptions2);
+        jListOptions2ScrollPane.setViewportView(jListOptions2);
         jListOptions2.setModel(model2);
 
         jListOptions2.setLayout(new GridBagLayout());
