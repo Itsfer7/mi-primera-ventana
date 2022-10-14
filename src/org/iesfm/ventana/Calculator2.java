@@ -50,15 +50,15 @@ public class Calculator2 {
         JButton buttonMultiply = new JButton("*");
         buttonMultiply.setBackground(veryLightGray);
         buttonMultiply.setBorder(buttonBorder);
-        JButton buttonSubtract = new JButton("-");
-        buttonSubtract.setBackground(veryLightGray);
-        buttonSubtract.setBorder(buttonBorder);
-        JButton buttonSum = new JButton("+");
-        buttonSum.setBackground(veryLightGray);
-        buttonSum.setBorder(buttonBorder);
-        JButton buttonDecimal = new JButton(".");
-        buttonDecimal.setBackground(veryLightGray);
-        buttonDecimal.setBorder(buttonBorder);
+        JButton buttonMinus = new JButton("-");
+        buttonMinus.setBackground(veryLightGray);
+        buttonMinus.setBorder(buttonBorder);
+        JButton buttonPlus = new JButton("+");
+        buttonPlus.setBackground(veryLightGray);
+        buttonPlus.setBorder(buttonBorder);
+        JButton buttonDot = new JButton(".");
+        buttonDot.setBackground(veryLightGray);
+        buttonDot.setBorder(buttonBorder);
         JButton buttonReset = new JButton("RESET");
         buttonReset.setBackground(turquoise);
         buttonReset.setForeground(Color.white);
@@ -104,14 +104,14 @@ public class Calculator2 {
         buttonPanel.add(button4);
         buttonPanel.add(button5);
         buttonPanel.add(button6);
-        buttonPanel.add(buttonSum);
+        buttonPanel.add(buttonPlus);
 
         buttonPanel.add(button1);
         buttonPanel.add(button2);
         buttonPanel.add(button3);
-        buttonPanel.add(buttonSubtract);
+        buttonPanel.add(buttonMinus);
 
-        buttonPanel.add(buttonDecimal);
+        buttonPanel.add(buttonDot);
         buttonPanel.add(button0);
         buttonPanel.add(buttonDivide);
         buttonPanel.add(buttonMultiply);
