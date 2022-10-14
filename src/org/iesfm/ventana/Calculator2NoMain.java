@@ -127,7 +127,6 @@ public class Calculator2NoMain extends JFrame {
         buttonEndPanel.setLayout(new GridLayout(1,2,2,2));
         buttonEndPanel.setPreferredSize(new Dimension(65,65));
         buttonEndPanel.setBorder(BorderFactory.createEmptyBorder(1,1,1,1));
-        //a
         buttonEndPanel.add(createButtonReset());
         buttonEndPanel.add(createButtonEquals());
 
