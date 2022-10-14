@@ -6,60 +6,34 @@ import java.awt.*;
 public class Calculator2NoMain extends JFrame {
 
     private Font font;
-
     private JPanel mainPanel;
-
     private JPanel textPanel;
-
     private JPanel buttonPanel;
-
     private JPanel buttonEndPanel;
-
     private Color turquoise;
-
     private Color orangeRed;
-
     private Color veyLightGray;
-
-
     private JButton buttonDel;
-
     private JButton buttonDivide;
-
     private JButton buttonMultiply;
-
     private JButton buttonMinus;
-
     private JButton buttonPlus;
-
     private JButton buttonDot;
-
     private JButton button0;
-
     private JButton button1;
-
     private JButton button2;
-
     private JButton button3;
-
     private JButton button4;
-
     private JButton button5;
-
     private JButton button6;
-
     private JButton button7;
-
     private JButton button8;
-
     private JButton button9;
-
     private JButton buttonReset;
-
     private JButton buttonEquals;
 
     public Calculator2NoMain() {
-        setBounds(10,10,300,500);
+        setBounds(10, 10, 300, 500);
         setVisible(true);
         setResizable(false);
         setTitle("Calculadora 2 No Main");
@@ -84,8 +58,8 @@ public class Calculator2NoMain extends JFrame {
 
     private JPanel createTextPanel() {
         textPanel = new JPanel();
-        JTextField textField = new JTextField("0",6);
-        textField.setPreferredSize(new Dimension(80,80));
+        JTextField textField = new JTextField("0", 6);
+        textField.setPreferredSize(new Dimension(80, 80));
         textField.setLayout(new BorderLayout());
         textField.setFont(createFont());
         textField.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -95,8 +69,8 @@ public class Calculator2NoMain extends JFrame {
 
     private JPanel createButtonPanel() {
         buttonPanel = new JPanel();
-        buttonPanel.setBounds(10,10,500,400);
-        buttonPanel.setLayout(new GridLayout(4,4,2,2));
+        buttonPanel.setBounds(10, 10, 500, 400);
+        buttonPanel.setLayout(new GridLayout(4, 4, 2, 2));
         buttonPanel.setBackground(Color.LIGHT_GRAY);
 
         buttonPanel.add(createButton7());
@@ -124,9 +98,9 @@ public class Calculator2NoMain extends JFrame {
 
     private JPanel createButtonEndPanel() {
         buttonEndPanel = new JPanel();
-        buttonEndPanel.setLayout(new GridLayout(1,2,2,2));
-        buttonEndPanel.setPreferredSize(new Dimension(65,65));
-        buttonEndPanel.setBorder(BorderFactory.createEmptyBorder(1,1,1,1));
+        buttonEndPanel.setLayout(new GridLayout(1, 2, 2, 2));
+        buttonEndPanel.setPreferredSize(new Dimension(65, 65));
+        buttonEndPanel.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
         buttonEndPanel.add(createButtonReset());
         buttonEndPanel.add(createButtonEquals());
 
@@ -134,15 +108,15 @@ public class Calculator2NoMain extends JFrame {
     }
 
     private Color createTurquoise() {
-        return turquoise = new Color(15,130,133);
+        return turquoise = new Color(15, 130, 133);
     }
 
     private Color createOrangeRed() {
-        return orangeRed = new Color(215,78,29);
+        return orangeRed = new Color(215, 78, 29);
     }
 
     private Color createVeryLightGray() {
-        return veyLightGray = new Color(229,228,224);
+        return veyLightGray = new Color(229, 228, 224);
     }
 
     private JButton createButton(String text, Color color, Color textColor) {
