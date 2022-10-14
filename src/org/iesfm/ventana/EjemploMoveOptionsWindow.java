@@ -10,7 +10,7 @@ public class EjemploMoveOptionsWindow {
         frame.setBounds(10,10,450,300);
         frame.setVisible(true);
         frame.setResizable(false);
-        frame.setTitle("MoveOptionsWindow");
+        frame.setTitle("EjemploMoveOptionsWindow");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel();
